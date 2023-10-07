@@ -104,8 +104,8 @@ jobs:
       # Build the firmware for all platform variants and full BMDA
       - name: Build all platform variants firmware and Linux BMDA
         run: |
-          make PROBE_HOST=stlink ST_BOOTLOADER=1 ENABLE_RTT=0
-          mv src/artifacts/blackmagic-{hosted,bmda}
+          make PROBE_HOST=stlink ST_BOOTLOADER=1 ENABLE_RTT=1
+          # mv src/artifacts/blackmagic-{hosted,bmda}
 
       # Package up all the artefacts and upload them
       - name: Archive firmware build artifacts as a zip
