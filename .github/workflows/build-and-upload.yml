@@ -112,5 +112,5 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: blackmagic-linux_${{ matrix.os.name }}-${{ matrix.compiler }}+arm-${{ matrix.arm-compiler }}
-          path: src/artifacts/*
+          path: src/*
           if-no-files-found: error
