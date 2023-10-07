@@ -46,21 +46,9 @@ SRC =              \
 	jtag_scan.c    \
 	lmi.c          \
 	lpc_common.c   \
-	lpc11xx.c      \
-	lpc17xx.c      \
-	lpc15xx.c      \
-	lpc40xx.c      \
-	lpc43xx.c      \
-	lpc546xx.c     \
-	lpc55xx.c      \
-	kinetis.c      \
 	main.c         \
 	maths_utils.c  \
 	morse.c        \
-	msp432e4.c     \
-	msp432p4.c     \
-	nrf51.c        \
-	nrf91.c        \
 	nxpke04.c      \
 	remote.c       \
 	rp.c           \
