@@ -3,9 +3,9 @@ ST_BOOTLOADER ?=
 CC = $(CROSS_COMPILE)gcc
 OBJCOPY = $(CROSS_COMPILE)objcopy
 
-OPT_FLAGS = -Os
+OPT_FLAGS = -Oz
 CFLAGS += -mcpu=cortex-m3 -mthumb -DSTM32F1 -I../libopencm3/include \
-	-I platforms/common/stm32
+	-I platforms/common/stm32 -Oz
 LDFLAGS_BOOT := $(LDFLAGS) --specs=nano.specs -lopencm3_stm32f1 \
 	-Wl,-T,platforms/stlink/stlink.ld -nostartfiles -lc \
 	-Wl,-Map=mapfile -mthumb -mcpu=cortex-m3 -Wl,-gc-sections \
