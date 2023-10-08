@@ -29,10 +29,8 @@ SRC =              \
 	adiv5_swd.c    \
 	command.c      \
 	cortex.c       \
-	cortexa.c      \
 	cortexm.c      \
 	crc32.c        \
-	efm32.c        \
 	exception.c    \
 	gdb_if.c       \
 	gdb_main.c     \
@@ -40,34 +38,15 @@ SRC =              \
 	gdb_packet.c   \
 	gdb_reg.c      \
 	hex_utils.c    \
-	hc32l110.c     \
-	imxrt.c        \
 	jtag_devs.c    \
 	jtag_scan.c    \
-	lmi.c          \
-	lpc_common.c   \
 	main.c         \
 	maths_utils.c  \
 	morse.c        \
-	nxpke04.c      \
 	remote.c       \
 	rp.c           \
-	sam3x.c        \
-	sam4l.c        \
-	samd.c         \
-	samx5x.c       \
 	sfdp.c         \
 	spi.c          \
-	stm32f1.c      \
-	ch32f1.c       \
-	stm32f4.c      \
-	stm32h5.c      \
-	stm32h7.c      \
-	stm32mp15.c    \
-	stm32l0.c      \
-	stm32l4.c      \
-	stm32g0.c      \
-	renesas.c      \
 	target.c       \
 	target_flash.c \
 	target_probe.c
@@ -78,7 +57,7 @@ endif
 
 ifneq ($(PC_HOSTED),1)
 # Output memory usage information
-LDFLAGS += -Wl,--print-memory-usage
+LDFLAGS += -Wl,--print-memory-usage -flto -ffunction-sections -fdata-sections -fomit-frame-pointer
 endif
 
 OPT_FLAGS ?= -Os
